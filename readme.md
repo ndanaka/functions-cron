@@ -107,9 +107,9 @@ Your cron jobs will now "tick" along forever. As I mentioned above, you're not
 limited to the `hourly-tick`, `daily-tick` and `weekly-tick` that are included
 in the AppEngine app. You can add more scheduled functions by modifying the [cron.yaml](/appengine/cron.yaml) file and re-deploying.
 
-## License:
+## License
 
-Copyright 2015 Google Inc. All Rights Reserved.
+Copyright 2017 Google Inc. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
