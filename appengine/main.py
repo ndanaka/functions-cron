@@ -1,12 +1,10 @@
-#!/usr/bin/env python
-
-# Copyright 2015 Google Inc. All Rights Reserved.
+# Copyright 2016 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-#      http://www.apache.org/licenses/LICENSE-2.0
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,14 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import webapp2
+import time
+import pubsub_utils
 
-"""
-Duracron sample application config.
-This file is automatically imported by app engine
-"""
+class PushToPubSub(webapp2.RequestHandler):
+    def get(self, topic):
+        pubsub_utils.publish_to_topic(topic, str(time.time()))
 
-from google.appengine.ext import vendor
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.write({"status": "200"})
 
-# Add any libraries installed in the "lib" folder.
-vendor.add('lib')
-
+app = webapp2.WSGIApplication([
+    webapp2.Route(r'/publish/<topic>', handler=PushToPubSub)
+], debug=True)

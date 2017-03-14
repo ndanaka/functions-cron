@@ -15,6 +15,9 @@
 # limitations under the License.
 """Pub/Sub Utility module for this sample."""
 
+import sys
+sys.path.append("./lib")
+
 import base64
 from time import strftime
 import httplib2
@@ -26,7 +29,6 @@ from google.appengine.api import app_identity
 from googleapiclient.errors import HttpError
 
 PUBSUB_SCOPES = ["https://www.googleapis.com/auth/pubsub"]
-
 
 def get_client():
     """Creates Pub/Sub client and returns it."""
