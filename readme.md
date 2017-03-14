@@ -96,7 +96,7 @@ this job, let's hit the **Run Now** button for the `/publish/hourly-tick` job.
 Then, go to your terminal and run...
 
 ```
-$ firebase functions:log --project flickering-torch-4371
+$ firebase functions:log --project <FIREBASE_PROJECT_ID>
 ```
 
 You should see a successful `console.log` from your `hourly_job`.
