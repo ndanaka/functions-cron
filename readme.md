@@ -1,4 +1,4 @@
-# App Engine Cron for Google Cloud Functions for Firebase
+# App Engine Cron with Google Cloud Functions for Firebase
 Google App Engine provides a Cron service. Using this service for scheduling and
 Google Cloud Pub/Sub for distributed messaging, you can build an application to
 reliably schedule tasks which can trigger Google Cloud Functions.
