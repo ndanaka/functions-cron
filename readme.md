@@ -56,24 +56,24 @@ Leave the default cron.yaml as is for now to run through the sample.
 ```
 $ gcloud config set project <your-project-id>
 ```
-1. Change directory to `appengine/`
+2. Change directory to `appengine/`
 ```
 $ cd appengine/
 ```
-1. Install the Python dependencies
+3. Install the Python dependencies
 ```
 $ pip upgrade -t lib -r requirements.txt
 ```
-1. Create an App Engine App
+4. Create an App Engine App
 ```
-$ gcloud beta app create
+$ gcloud app create
 ```
-1. Deploy the application to App Engine.
+5. Deploy the application to App Engine.
 ```
 $ gcloud app deploy app.yaml \ cron.yaml
 ```
-1. Open [Google Cloud Logging](https://console.cloud.google.com/logs/viewer) and in the right dropdown select "GAE Application". If you don't see this option, it may mean that App Engine is still in the process of deploying.
-1. Look for a log entry calling `/_ah/start`. If this entry isn't an error, then you're done deploying the App Engine app.
+6. Open [Google Cloud Logging](https://console.cloud.google.com/logs/viewer) and in the right dropdown select "GAE Application". If you don't see this option, it may mean that App Engine is still in the process of deploying.
+7. Look for a log entry calling `/_ah/start`. If this entry isn't an error, then you're done deploying the App Engine app.
 
 ### 3. Deploy to Google Cloud Functions for Firebase
 
