@@ -86,7 +86,7 @@ $ firebase deploy --only functions --project <FIREBASE_PROJECT_ID>
 If you have existing functions, move the example from [functions/index.js](functions/index.js)
 into your project's `index.js`
 
-### 4. Verify your cron function is running!
+### 4. Verify your Cron Jobs
 We can verify that our function is wired up correctly by opening the [Task Queue](https://console.cloud.google.com/appengine/taskqueues) tab in AppEngine and
 clicking on **Cron Jobs**. Each of these jobs has a **Run Now** button next to it.
 
