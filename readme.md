@@ -36,7 +36,7 @@ The overview for configuring and running this sample is as follows:
     3. [Enable Project Billing](https://support.google.com/cloud/answer/6293499#enable-billing)
 
 
-### 2. Clone this respository
+### 2. Clone this repository
 
 To clone the GitHub repository to your computer, run the following command:
 
