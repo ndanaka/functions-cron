@@ -62,7 +62,7 @@ $ cd appengine/
 ```
 3. Install the Python dependencies
 ```
-$ pip upgrade -t lib -r requirements.txt
+$ pip install -t lib -r requirements.txt
 ```
 4. Create an App Engine App
 ```
