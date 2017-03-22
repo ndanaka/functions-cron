@@ -25,6 +25,7 @@ import oauth2client.contrib.appengine as gae_oauth2client
 from apiclient import discovery
 from google.appengine.api import memcache
 from google.appengine.api import app_identity
+from google.appengine.api import urlfetch
 
 from googleapiclient.errors import HttpError
 
@@ -48,6 +49,7 @@ def get_project_id():
 
 
 def publish_to_topic(topic, msg='', create=True):
+    urlfetch.set_default_fetch_deadline(180)
     pubsub = get_client()
     full_name = get_full_topic_name(topic)
     message = {"messages": [{"data": base64.b64encode(msg)}]}
