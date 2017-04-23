@@ -70,7 +70,7 @@ $ gcloud app create
 ```
 5. Deploy the application to App Engine.
 ```
-$ gcloud app deploy app.yaml \ cron.yaml
+$ gcloud app deploy app.yaml \cron.yaml
 ```
 6. Open [Google Cloud Logging](https://console.cloud.google.com/logs/viewer) and in the right dropdown select "GAE Application". If you don't see this option, it may mean that App Engine is still in the process of deploying.
 7. Look for a log entry calling `/_ah/start`. If this entry isn't an error, then you're done deploying the App Engine app.
