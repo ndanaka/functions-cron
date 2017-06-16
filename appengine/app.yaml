@@ -3,6 +3,13 @@ api_version: 1
 threadsafe: true
 
 handlers:
+
+# Handler for the pubsub cron.
+- url: /publish/.*
+  script: main.app
+  login: admin
+  secure: always
+
 - url: /.*
   script: main.app
 
